@@ -1,0 +1,15 @@
+- name: Home
+  link: /
+  url: /
+- name: AACA
+  link: /aaca/
+  url: /aaca.html
+- name: Events
+  link: /events/
+  url: /events.html
+- name: News
+  link: /news/
+  url: /news.html
+- name: Contact
+  link: /contact/
+  url: /contact.html
