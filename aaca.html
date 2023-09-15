@@ -1,0 +1,167 @@
+---
+layout: default
+title: AACA
+---
+
+<!-- about us -->
+<div class="bg-gray-100 py-16">
+  <div class="container mx-auto px-4 md:px-8 flex flex-wrap items-center">
+    <!-- Left Column (Text) -->
+    <div class="w-full md:w-1/2 px-4 mb-6 md:mb-0">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">About Us</h2>
+      <p class="text-gray-600 leading-relaxed">
+        The All Assam Chess Association (Assamese: সদৌ অসম ডবা সন্থা) is a
+        registered (under the Societies Registration Act: XXI of 1860, Number
+        1347 of 1981–82) chess association of the Assam state of India. It was
+        formed in the late 1960s by Bodiyuz Zaman from Jorhat. The first
+        president of the association was Kamakhya Prasad Tripathi. It is
+        affiliated with the All India Chess Federation and officially accredited
+        by the Fédération Internationale des Échecs,
+      </p>
+    </div>
+
+    <!-- Right Column (Images) -->
+    <div class="w-full md:w-1/2 px-4 flex flex-wrap -mx-2 items-center">
+      <!-- Image 1 -->
+      <div class="w-1/2 md:w-1/2 px-2 mb-4">
+        <img
+          src="../../assets/images/aaca_1.jpg"
+          alt="Image 1"
+          class="rounded-lg"
+        />
+      </div>
+
+      <!-- Image 2 -->
+      <div class="w-1/2 md:w-1/2 px-2 mb-4">
+        <img
+          src="../../assets/images/aaca_2.jpg"
+          alt="Image 2"
+          class="rounded-lg"
+        />
+      </div>
+
+      <!-- Image 3 -->
+      <div class="w-1/2 md:w-1/2 px-2 mb-4">
+        <img
+          src="../../assets/images/aaca_4.jpg"
+          alt="Image 3"
+          class="rounded-lg"
+        />
+      </div>
+
+      <!-- Image 4 -->
+      <div class="w-1/2 md:w-1/2 px-2 mb-4">
+        <img
+          src="../../assets/images/aaca_3.jpg"
+          alt="Image 4"
+          class="rounded-lg"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+<!-- affiliates -->
+<div class="py-6 mt-8">
+  <div
+    class="container mx-auto px-4 md:px-8 flex flex-wrap flex-col-reverse md:flex-row"
+  >
+    <!-- list col -->
+    <div class="w-full md:w-1/2 mx-auto sm:px-6 lg:px-8">
+      <div class="flex flex-col">
+        <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+          <div
+            class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8"
+          >
+            <div
+              class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg"
+            >
+              <table class="min-w-full divide-y divide-gray-200 text-center">
+                <thead class="bg-gray-50">
+                  <tr>
+                    <th
+                      scope="col"
+                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider text-center"
+                    >
+                      Member Name
+                    </th>
+                    <th
+                      scope="col"
+                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider text-center"
+                    >
+                      Contact Information
+                    </th>
+                  </tr>
+                </thead>
+                <tbody x-max="2">
+                  {% for event in site.data.affiliates%}
+                  <tr class="bg-white" x-description="Odd row">
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                    >
+                      {{event.name}}
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                    >
+                      {{event.contact}}
+                    </td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- text col -->
+    <div class="w-full md:w-1/2 px-4 mb-6 md:mb-0">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Affiliates</h2>
+      <p class="text-gray-600 leading-relaxed">
+        Till date AACA has managed to establish district affiliates in each of
+        Assam's districts as well as various chess organizations under its
+        affiliation. The district affiliates and organizations are even able to
+        send players to participate regularly in National and International
+        chess tournaments and events
+      </p>
+    </div>
+  </div>
+</div>
+<!-- team -->
+<div class="bg-white">
+  <div
+    class="max-w-7xl mx-auto py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-24"
+  >
+    <div class="space-y-12">
+      <div class="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
+        <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
+          Meet our team
+        </h2>
+        <p class="text-xl text-gray-500">
+          Meet the members of All Assam Chess Association.
+        </p>
+      </div>
+      <ul
+        class="mx-auto space-y-16 sm:grid sm:grid-cols-2 sm:gap-16 sm:space-y-0 lg:grid-cols-3 lg:max-w-5xl"
+      >
+        {% for member in site.data.team %}
+        <li>
+          <div class="space-y-6">
+            <img
+              class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56"
+              src="../../assets/images/{{member.image}}"
+              alt=""
+            />
+            <div class="space-y-2">
+              <div class="text-lg leading-6 font-medium space-y-1">
+                <h3>{{member.name}}</h3>
+                <p class="text-indigo-600">{{member.role}}</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
